@@ -16,7 +16,7 @@ export default function Layout() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [showSplash, setShowSplash] = useState(!splashShown);
 
- const loading = navigation.state !== "idle";
+  const loading = navigation.state !== "idle";
 
   const handleSplashComplete = () => {
     splashShown = true;
@@ -25,7 +25,6 @@ export default function Layout() {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#0f2a3a] relative">
-
       {showSplash && <SplashScreen onComplete={handleSplashComplete} />}
       <PageLoader visible={loading && !showSplash} />
 
@@ -37,8 +36,7 @@ export default function Layout() {
       />
 
       <section className="grid grid-cols-1 lg:grid-cols-7 gap-6 flex-1 px-6 py-8 relative">
-
-        <aside className="hidden lg:block lg:col-span-1 bg-[#0a1f2b]/80 backdrop-blur-sm rounded-2xl border border-[#e8d8b5]/20 p-4 shadow-lg z-10 h-fit sticky top-20">
+        <aside className="hidden lg:block lg:col-span-1 bg-[#0a1f2b]/80 backdrop-blur-sm rounded-2xl border border-[#e8d8b5]/20 p-4 shadow-lg z-10 sticky top-20 max-h-[calc(100vh-5rem)] overflow-y-auto">
           <Sidebar genres={genres} />
         </aside>
 
@@ -67,10 +65,7 @@ export default function Layout() {
             overflow-y-auto p-5
             ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
         >
-          <Sidebar
-            genres={genres}
-            onClose={() => setSidebarOpen(false)}
-          />
+          <Sidebar genres={genres} onClose={() => setSidebarOpen(false)} />
         </aside>
       </div>
 

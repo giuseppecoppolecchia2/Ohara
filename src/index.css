@@ -38,3 +38,11 @@ body{
   display: none;
 }
 
+
+aside::-webkit-scrollbar {
+  display: none;
+}
+aside {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
