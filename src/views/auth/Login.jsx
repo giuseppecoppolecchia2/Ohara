@@ -24,15 +24,13 @@ export default function Login() {
   };
 
   return (
-    <main className="min-h-screen flex flex-col justify-start items-center gap-3">
-      
-      <Logo className="w-60" />
-      <div className="absolute w-[500px] h-[500px] bg-[#c9a227]/10 blur-3xl rounded-full" />
-      
+    <main className="min-h-screen flex flex-col justify-start items-center gap-3 px-4">
+      <Logo className="w-40 sm:w-60" />
+      <div className="absolute w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] bg-[#c9a227]/10 blur-3xl rounded-full" />
 
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="w-100 max-w-md bg-[#0f2a3a]/70 backdrop-blur-sm rounded-2xl border border-[#e8d8b5]/50 shadow-sm p-10 text-[#e8d8b5]/80"
+        className="w-full max-w-md bg-[#0f2a3a]/70 backdrop-blur-sm rounded-2xl border border-[#e8d8b5]/50 shadow-sm p-6 sm:p-10 text-[#e8d8b5]/80"
       >
         <h1 className="text-2xl font-medium mb-1 text-center">
           Bentornato
@@ -96,9 +94,9 @@ export default function Login() {
         </button>
 
         <p className="text-center text-sm mt-5">
-          Non hai un account?{" "} <br />
+          Non hai un account?{" "}<br />
           <Link to={routes.register} className="text-white underline">
-              Registrati
+            Registrati
           </Link>
         </p>
       </form>

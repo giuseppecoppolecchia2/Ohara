@@ -9,13 +9,9 @@ export default function AuthLayout() {
 
       <Navbar />
 
-      <section className="flex-1  flex items-center justify-center px-6 py-8 relative z-10  ">
+      <section className="flex-1 flex items-start sm:items-center justify-center px-4 py-8 relative z-10">
         <Outlet />
       </section>
-
-      {/* <div className="relative z-10">
-        <Footer />
-      </div> */}
     </div>
   );
 }

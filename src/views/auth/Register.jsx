@@ -31,25 +31,24 @@ export default function Register() {
   };
 
   return (
-    <main className="min-h-screen flex flex-col justify-start items-center gap-3">
-      <div className="absolute w-[500px] h-[500px] bg-[#c9a227]/10 blur-3xl rounded-full" />
+    <main className="min-h-screen flex flex-col justify-start items-center gap-3 px-4">
+      <div className="absolute w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] bg-[#c9a227]/10 blur-3xl rounded-full" />
 
-      
-        <Logo className="w-60" />
+      <Logo className="w-40 sm:w-60" />
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="w-full max-w-md bg-[#0f2a3a]/70 backdrop-blur-sm rounded-2xl border border-[#e8d8b5]/50 shadow-sm p-10 text-[#e8d8b5]/80"
+        className="w-full max-w-md bg-[#0f2a3a]/70 backdrop-blur-sm rounded-2xl border border-[#e8d8b5]/50 shadow-sm p-6 sm:p-10 text-[#e8d8b5]/80"
       >
         <h1 className="text-2xl font-medium mb-1 text-center">
           Crea un account
         </h1>
-        <p className="  mb-8 text-center text-xs">
+        <p className="mb-8 text-center text-xs">
           Compila tutti i campi per registrarti.
         </p>
 
-        <div className="grid grid-cols-2 gap-3 mb-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
           <div>
-            <label className="block text-sm font-medium  mb-1.5">Nome</label>
+            <label className="block text-sm font-medium mb-1.5">Nome</label>
             <input
               type="text"
               placeholder="Mario"
@@ -63,7 +62,7 @@ export default function Register() {
             )}
           </div>
           <div>
-            <label className="block text-sm font-medium  mb-1.5">Cognome</label>
+            <label className="block text-sm font-medium mb-1.5">Cognome</label>
             <input
               type="text"
               placeholder="Rossi"
@@ -79,7 +78,7 @@ export default function Register() {
         </div>
 
         <div className="mb-4">
-          <label className="block text-sm font-medium  mb-1.5">Username</label>
+          <label className="block text-sm font-medium mb-1.5">Username</label>
           <input
             type="text"
             placeholder="mariorossi"
@@ -94,7 +93,7 @@ export default function Register() {
         </div>
 
         <div className="mb-4">
-          <label className="block text-sm font-medium  mb-1.5">Email</label>
+          <label className="block text-sm font-medium mb-1.5">Email</label>
           <input
             type="email"
             placeholder="mario@esempio.it"
@@ -109,7 +108,7 @@ export default function Register() {
         </div>
 
         <div className="mb-8">
-          <label className="block text-sm font-medium  mb-1.5">Password</label>
+          <label className="block text-sm font-medium mb-1.5">Password</label>
           <input
             type="password"
             placeholder="Almeno 8 caratteri"
@@ -132,12 +131,12 @@ export default function Register() {
 
         <button
           type="submit"
-          className="btn bg-[#a68847]/90  hover:text-[#0f2a3a] hover:scale-101 transition-all duration-200 w-full"
+          className="btn bg-[#a68847]/90 hover:text-[#0f2a3a] hover:scale-101 transition-all duration-200 w-full"
         >
           Registrati
         </button>
 
-        <p className="text-center text-sm  mt-5">
+        <p className="text-center text-sm mt-5">
           Hai già un account?{" "}
           <a href="/login" className="text-white underline">
             Accedi
