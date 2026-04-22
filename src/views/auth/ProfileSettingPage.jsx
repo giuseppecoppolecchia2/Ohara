@@ -58,7 +58,6 @@ export default function ProfileSettingPage() {
     <main className="min-h-screen flex justify-center py-10 px-4">
       <div className="w-full max-w-2xl flex flex-col gap-8">
         
-        {/* Header con pulsante torna indietro */}
         <div className="flex items-center gap-4">
             <button 
                 onClick={() => navigate(routes.profile)}
@@ -69,7 +68,6 @@ export default function ProfileSettingPage() {
             <h1 className="text-3xl font-bold text-[#e8d8b5]">Impostazioni Profilo</h1>
         </div>
 
-        {/* Sezione Foto Profilo */}
         <div className="bg-[#0a1f2b]/80 backdrop-blur-sm border border-[#e8d8b5]/40 rounded-2xl shadow-lg p-8">
           <h2 className="text-xl font-semibold mb-6 text-[#e8d8b5] flex items-center gap-2">
             <FaImage className="opacity-70" /> Foto profilo
@@ -109,7 +107,6 @@ export default function ProfileSettingPage() {
           </form>
         </div>
 
-        {/* Sezione Dati Personali */}
         <div className="bg-[#0a1f2b]/80 backdrop-blur-sm border border-[#e8d8b5]/40 rounded-2xl shadow-lg p-8">
           <h2 className="text-xl font-semibold mb-6 text-[#e8d8b5] flex items-center gap-2">
             <FaUser className="opacity-70" /> Informazioni Personali
