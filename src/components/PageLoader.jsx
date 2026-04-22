@@ -21,7 +21,6 @@ export default function PageLoader({ visible }) {
       canvas.style.height = window.innerHeight + "px";
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-      // 🔥 meno particelle dello splash
       particles = Array.from({ length: 120 }, () => ({
         x: Math.random() * window.innerWidth,
         y: Math.random() * window.innerHeight,
@@ -44,20 +43,17 @@ export default function PageLoader({ visible }) {
         if (p.y < 0) p.y = window.innerHeight;
         if (p.y > window.innerHeight) p.y = 0;
 
-        // particella
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
         ctx.fillStyle = "rgba(201,162,39,0.9)";
         ctx.fill();
 
-        // glow fake leggero
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r * 2, 0, Math.PI * 2);
         ctx.fillStyle = "rgba(201,162,39,0.1)";
         ctx.fill();
       });
 
-      // connessioni leggere
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const a = particles[i],
@@ -94,10 +90,8 @@ export default function PageLoader({ visible }) {
 
       <div className="loader__overlay" />
 
-      {/* luce centrale */}
       <div className="loader__light" />
 
-      {/* testo minimale */}
       <div className="loader__text">Caricamento...</div>
     </div>
   );

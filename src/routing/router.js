@@ -15,69 +15,70 @@ import ProfileSettingPage from "../views/auth/ProfileSettingPage";
 import DetailPage from "../views/DetailPage";
 import ScrollToTop from "../components/ScrollToTop";
 import FavouritePage from "../views/FavouritePage";
-
+import ErrorPage from "../components/ErrorPage";
 
 const router = createBrowserRouter([
-    {
-        Component: ScrollToTop,
-        children: [
-            {
+  {
+    Component: ScrollToTop,
+    children: [
+      {
         path: routes.home,
         Component: Layout,
         loader: getGenres,
         children: [
-            {
-                path: routes.home,
-                Component: Homepage,
-                loader: gamesLoader
-            },
-            {
-                path: routes.search,
-                Component: SearchPage,
-                loader: getSearchedGames
-            },
-            {
-                path: routes.genre,
-                Component: GenrePage,
-                loader: getGamesByGenre
-            },
-            {
-                path: routes.favorites,
-                Component: FavouritePage
-            }
-        ]
-    },
-    {
-        path: '/auth',
+          {
+            path: routes.home,
+            Component: Homepage,
+            loader: gamesLoader,
+          },
+          {
+            path: routes.search,
+            Component: SearchPage,
+            loader: getSearchedGames,
+          },
+          {
+            path: routes.genre,
+            Component: GenrePage,
+            loader: getGamesByGenre,
+          },
+          {
+            path: routes.favorites,
+            Component: FavouritePage,
+          },
+        ],
+      },
+      {
+        path: "/auth",
         Component: AuthenticationLayout,
-            children: [
-                {
-                path: routes.register,
-                Component: Register
-            },
-            {
-                path: routes.login,
-                Component: Login
-            },
-            {
-                path: routes.profile,
-                Component: Profile
-            },
-            {
-                path: routes.profile_settings,
-                Component: ProfileSettingPage
-            }
-        ]
-    },
-    {
+        children: [
+          {
+            path: routes.register,
+            Component: Register,
+          },
+          {
+            path: routes.login,
+            Component: Login,
+          },
+          {
+            path: routes.profile,
+            Component: Profile,
+          },
+          {
+            path: routes.profile_settings,
+            Component: ProfileSettingPage,
+          },
+        ],
+      },
+      {
         path: routes.detail,
         Component: DetailPage,
-        loader: getGameDetails
-    }
-
-        ]
-    }
-    
-])
-export default router
-    
+        loader: getGameDetails,
+      },
+      {
+        path: "*",
+        Component: ErrorPage,
+      },
+    ],
+  },
+]);
+export default router;

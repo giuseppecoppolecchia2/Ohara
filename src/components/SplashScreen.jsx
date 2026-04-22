@@ -146,7 +146,7 @@ export default function SplashScreen({ onComplete }) {
         <span className="splash__logo-text ">Benvenuto su Ohara</span>
       </div>
       <div className="splash__scroll">
-        <span className='text-[#fec039]'>Entra in Ohara</span>
+        <span className='text-[#fec039]'>Scrolla per entrare</span>
         <div className="splash__arrow" />
       </div>
     </div>
