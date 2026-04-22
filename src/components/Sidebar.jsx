@@ -28,7 +28,7 @@ export default function Sidebar({ genres, onClose }) {
     { label: "Home", to: routes.home, icon: <FaHome size={13} /> },
     { label: "Preferiti", to: routes.favorites, icon: <FaStar size={13} /> },
     ...(user
-      ? [{ label: user.user_metadata?.username ?? "Profilo", to: routes.profile, icon: <FaUserCircle size={13} /> }]
+      ? [{ label: user.user_metadata?.first_name  ?? "Profilo", to: routes.profile, icon: <FaUserCircle size={13} /> }]
       : [
           { label: "Accedi", to: routes.login, icon: <FaSignInAlt size={13} />  },
           { label: "Registrati", to: routes.register, icon: <FaUserPlus size={13} />  },
