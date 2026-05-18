@@ -1,16 +1,86 @@
-# React + Vite
+# 🎮 OHARA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Ohara** è un portale dedicato al mondo dei videogiochi sviluppato come progetto finale partendo dalla traccia **Rehacktor**.  
+L’applicazione permette agli utenti di esplorare videogiochi, cercarli per nome, filtrarli per categoria, visualizzare dettagli completi e interagire tramite autenticazione, preferiti e recensioni.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** https://ohara-blush.vercel.app  
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+### 🎮 Catalogo videogiochi
+- Visualizzazione dei videogiochi tramite card
+- Lista aggiornata tramite **RAWG API**
+- Homepage con videogiochi popolari/trending
+- Pagina di dettaglio per ogni gioco
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🔍 Ricerca e filtri
+- Ricerca videogiochi tramite nome
+- Filtro per **genere**
+- Navigazione dinamica tramite **React Router**
 
-## Expanding the ESLint configuration
+### 👤 Autenticazione utenti
+- Registrazione account
+- Login / Logout
+- Gestione sessione persistente
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🙍‍♂️ Profilo utente
+- Pagina profilo personale
+- Modifica informazioni utente
+- Upload avatar personalizzato
+
+### ❤️ Preferiti
+- Aggiunta/rimozione giochi dai preferiti
+- Salvataggio nel database
+- Lista dei giochi preferiti nel profilo
+
+### ⭐ Recensioni
+- Possibilità di lasciare recensioni ai videogiochi
+- Visualizzazione recensioni degli altri utenti
+- Salvataggio persistente tramite database
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **React**
+- **Vite**
+- **React Router DOM**
+- **Tailwind CSS**
+- **DaisyUI**
+- **React Hook Form**
+- **React Icons**
+
+### Backend / Database
+- **Supabase**
+  - Authentication
+  - Database PostgreSQL
+  - Storage per avatar
+  - Gestione sessioni utente
+
+### API
+- **RAWG Video Games Database API**
+
+---
+
+## 📸 Preview
+
+### Homepage
+Esplora centinaia di videogiochi tramite una UI moderna e responsive.
+
+### Pagina dettaglio
+Visualizza:
+- descrizione del gioco
+- genere
+- immagini
+- informazioni principali
+- recensioni
+- aggiunta ai preferiti
+
+### Profilo utente
+Gestione del proprio account con:
+- dati personali
+- avatar personalizzato
+- lista preferiti
+
