@@ -1,6 +1,6 @@
 # 🎮 OHARA
 
-**Ohara** è un portale dedicato al mondo dei videogiochi sviluppato come progetto finale partendo dalla traccia **Rehacktor**.  
+**Ohara** è un portale dedicato al mondo dei videogiochi.
 L’applicazione permette agli utenti di esplorare videogiochi, cercarli per nome, filtrarli per categoria, visualizzare dettagli completi e interagire tramite autenticazione, preferiti e recensioni.
 
 🔗 **Live Demo:** https://ohara-blush.vercel.app  
